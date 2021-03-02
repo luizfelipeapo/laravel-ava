@@ -34,4 +34,4 @@ At last run following command to finish install.
 
 Open `http://localhost/admin/` in browser,use username `admin` and password `admin` to login.
 
-This project have a base developed by AINV technology and laravel-ava for which it was used for the frontend of the elements, grid, widgets and etc.
+This project have a base developed by AINV technology, with my assistance, for which it was used for the frontend of the elements, grid, widgets and etc.

@@ -14,5 +14,5 @@
 
     </div>
     <!-- Default to the left -->
-    <strong>Powered by <a href="https://github.com/ava/laravel-ava" target="_blank">laravel-ava</a></strong>
+    <strong>Powered by <a href="https://github.com/luizfelipeapo/laravel-ava" target="_blank">AVA</a></strong>
 </footer>
