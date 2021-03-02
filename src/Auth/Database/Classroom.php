@@ -54,7 +54,7 @@ class Classroom extends Model
     public function students(): BelongsToMany
     {
         $pivotTable = config('admin.database.class_registration_table');
-        $relatedModel = config('admin.database.class_registration_model');
+        $relatedModel = config('admin.database.students_model');
         return $this->belongsToMany($relatedModel, $pivotTable, 'classroom_id', 'student_id');
     }
 }
