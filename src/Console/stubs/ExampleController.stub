@@ -2,10 +2,10 @@
 
 namespace DummyNamespace;
 
-use Encore\Admin\Controllers\AdminController;
-use Encore\Admin\Form;
-use Encore\Admin\Grid;
-use Encore\Admin\Show;
+use LApolinario\Ava\Controllers\AdminController;
+use LApolinario\Ava\Form;
+use LApolinario\Ava\Grid;
+use LApolinario\Ava\Show;
 
 class ExampleController extends AdminController
 {

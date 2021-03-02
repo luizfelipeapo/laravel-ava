@@ -64,7 +64,7 @@
         });
     };
 
-@if($relation == \Encore\Admin\Grid\Displayers\BelongsTo::class)
+@if($relation == \LApolinario\Ava\Grid\Displayers\BelongsTo::class)
 
     var selected = null;
 
