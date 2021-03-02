@@ -97,6 +97,28 @@ class CreateAdminTables extends Migration
             $table->index('user_id');
             $table->timestamps();
         });
+
+        Schema::create(config('admin.database.classroom_entity_table'), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->timestamps();
+        });
+
+        Schema::create(config('admin.database.student_entity_table'), function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('gender');
+            $table->date('dob');
+            $table->timestamps();
+        });
+
+        Schema::create(config('admin.database.class_registration_table'), function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer ('classroom_id');
+            $table->integer('student_id');
+            $table->unique('classroom_id', 'student_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -115,5 +137,6 @@ class CreateAdminTables extends Migration
         Schema::dropIfExists(config('admin.database.role_permissions_table'));
         Schema::dropIfExists(config('admin.database.role_menu_table'));
         Schema::dropIfExists(config('admin.database.operation_log_table'));
+        Schema::dropIfExists(config('admin.database.classroom_entity_table'));
     }
 }
