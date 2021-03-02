@@ -27,7 +27,9 @@ class AvaServiceProvider extends ServiceProvider
     /**
      * @var array
      */
-    protected $commands = [];
+    protected $commands = [
+        Console\InstallCommand::class,
+    ];
 
     /**
      * The application's route middleware.
