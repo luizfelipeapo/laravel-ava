@@ -636,12 +636,15 @@ class Column
     {
         if (is_array($item)) {
             array_walk_recursive($item, function (&$value) {
-                $value = htmlentities($value);
+                if (is_string($value)) {
+                    $value = htmlentities($value);
+                }
             });
         } else {
-            $item = htmlentities($item);
+            if (is_string($item)) {
+                $item = htmlentities($item);
+            }
         }
-
         return $item;
     }
 
