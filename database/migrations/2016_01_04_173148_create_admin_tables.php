@@ -117,7 +117,6 @@ class CreateAdminTables extends Migration
             $table->integer ('classroom_id');
             $table->integer('student_id');
             $table->index(['classroom_id', 'student_id']);
-            $table->unique('classroom_id', 'student_id');
             $table->timestamps();
         });
     }
