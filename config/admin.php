@@ -179,6 +179,14 @@ return [
         'users_table' => 'admin_users',
         'users_model' => LApolinario\Ava\Auth\Database\Administrator::class,
 
+        // Classroom tables and model.
+        'classroom_entity_table' => 'admin_classroom',
+        'classroom_model' => LApolinario\Ava\Auth\Database\Classroom::class,
+
+        // Classroom tables and model.
+        'student_entity_table' => 'admin_student',
+        'students_model' => LApolinario\Ava\Auth\Database\Students::class,
+
         // Role table and model.
         'roles_table' => 'admin_roles',
         'roles_model' => LApolinario\Ava\Auth\Database\Role::class,
@@ -197,6 +205,7 @@ return [
         'role_users_table'       => 'admin_role_users',
         'role_permissions_table' => 'admin_role_permissions',
         'role_menu_table'        => 'admin_role_menu',
+        'class_registration_table' => 'admin_class_registration'
     ],
 
     /*
