@@ -26,10 +26,5 @@
 </style>
 
 <div class="title">
-    laravel-ava
-</div>
-<div class="links">
-    <a href="https://github.com/z-song/laravel-ava" target="_blank">Github</a>
-    <a href="http://laravel-ava.org/docs"  target="_blank">Documentation</a>
-    <a href="http://laravel-ava.org/demo"  target="_blank">Demo</a>
+    Dashboard
 </div>
