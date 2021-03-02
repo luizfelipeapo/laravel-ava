@@ -68,7 +68,12 @@ class StudentController extends AdminController
         $show = new Show($studentsModel::findOrFail($id));
         $show->field('id', 'ID');
         $show->field('name', trans('admin.name'));
-        $show->field('gender', trans('admin.gender'));
+        $show->field('gender', trans('admin.gender'))->as(function ($dob) {
+            if ($dob) {
+                return trans('admin.female');
+            }
+            return trans('admin.male');
+        });
         $show->field('dob', trans('admin.dob'));
         $show->field('created_at', trans('admin.created_at'));
         $show->field('updated_at', trans('admin.updated_at'));
