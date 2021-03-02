@@ -107,7 +107,7 @@ class CreateAdminTables extends Migration
         Schema::create(config('admin.database.student_entity_table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('gender');
+            $table->string('gender');
             $table->date('dob');
             $table->timestamps();
         });

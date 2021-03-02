@@ -69,7 +69,7 @@ class StudentController extends AdminController
         $show->field('id', 'ID');
         $show->field('name', trans('admin.name'));
         $show->field('gender', trans('admin.gender'));
-        $show->field('dob', trans('admin.permissions'));
+        $show->field('dob', trans('admin.dob'));
         $show->field('created_at', trans('admin.created_at'));
         $show->field('updated_at', trans('admin.updated_at'));
         return $show;
@@ -87,7 +87,7 @@ class StudentController extends AdminController
         $userTable = config('admin.database.student_entity_table');
         $connection = config('admin.database.connection');
         $form->display('id', 'ID');
-        $form->text('name', trans('admin.name'))->rules('required');
+        $form->text('name', trans('admin.name'));
         $form->select('gender', trans('admin.gender'))->options([trans('admin.male'),trans('admin.female')]);
         $form->date('dob', trans('admin.dob'));
         $form->display('created_at', trans('admin.created_at'));

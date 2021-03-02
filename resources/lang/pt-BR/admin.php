@@ -99,4 +99,9 @@ return [
         'filter_placeholder' => 'Filtrar',
     ],
     'menu_titles'           => [],
+    'gender'                 => 'Gênero',
+    'dob'                    => 'Nascimento',
+    'students'               => 'Estudantes',
+    'male'                   => 'Masculino',
+    'female'                 => 'Feminino'
 ];

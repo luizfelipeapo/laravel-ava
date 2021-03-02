@@ -104,4 +104,10 @@ return [
     'prev'                   => 'Prev',
     'next'                   => 'Next',
     'quick_create'           => 'Quick create',
+    'gender'                 => 'Gender',
+    'dob'                    => 'Dob',
+    'students'               => 'students',
+    'Students'               => 'Students',
+    'male'                   => 'Male',
+    'female'                 => 'Female'
 ];
