@@ -1,0 +1,57 @@
+{
+    "name": "luizfelipeapo/laravel-ava",
+    "description": "laravel ava",
+    "type": "library",
+    "keywords": ["laravel", "ava", "grid", "form"],
+    "homepage": "https://github.com/luizfelipeapo/laravel-ava",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luiz Felipe Apolinario",
+            "email": "luizfelipeapo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/dom-crawler": "~3.1|~4.0|~5.0",
+        "laravel/framework": ">=5.5",
+        "doctrine/dbal": "2.*"
+    },
+    "require-dev": {
+        "laravel/laravel": ">=5.5",
+        "fzaninotto/faker": "~1.4",
+        "intervention/image": "~2.3",
+        "laravel/browser-kit-testing": "^6.0",
+        "spatie/phpunit-watcher": "^1.22.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LApolinario\\Ava\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    },
+    "suggest": {
+        "intervention/image": "Required to handling and manipulation upload images (~2.3).",
+        "spatie/eloquent-sortable": "Required to built orderable gird."
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LApolinario\\Ava\\AvaServiceProvider"
+            ],
+            "aliases": {
+                "Admin": "LApolinario\\Ava\\Facades\\AvaServiceProvider"
+            }
+        }
+    }
+}
