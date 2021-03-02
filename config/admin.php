@@ -205,7 +205,8 @@ return [
         'role_users_table'       => 'admin_role_users',
         'role_permissions_table' => 'admin_role_permissions',
         'role_menu_table'        => 'admin_role_menu',
-        'class_registration_table' => 'admin_class_registration'
+        'class_registration_table' => 'admin_class_registration',
+        'class_registration_model' => LApolinario\Ava\Auth\Database\ClassRegistration::class,
     ],
 
     /*

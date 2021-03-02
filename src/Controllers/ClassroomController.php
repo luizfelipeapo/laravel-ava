@@ -67,7 +67,7 @@ class ClassroomController extends AdminController
         $show = new Show($classroomModel::findOrFail($id));
         $show->field('id', 'ID');
         $show->field('name', trans('admin.name'));
-        $show->field('students', trans('admin.permissions'))->as(function ($students) {
+        $show->field('students', trans('admin.students'))->as(function ($students) {
             return $students->pluck('name');
         })->label();
         $show->field('created_at', trans('admin.created_at'));

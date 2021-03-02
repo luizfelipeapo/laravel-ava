@@ -101,7 +101,6 @@ class CreateAdminTables extends Migration
         Schema::create(config('admin.database.classroom_entity_table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('students');
             $table->timestamps();
         });
 
@@ -117,6 +116,7 @@ class CreateAdminTables extends Migration
             $table->increments('id');
             $table->integer ('classroom_id');
             $table->integer('student_id');
+            $table->index(['classroom_id', 'student_id']);
             $table->unique('classroom_id', 'student_id');
             $table->timestamps();
         });
