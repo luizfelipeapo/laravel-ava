@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace LApolinario\Ava\Auth\Database;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use LApolinario\Ava\Traits\DefaultDatetimeFormat;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -43,5 +44,17 @@ class Classroom extends Model
         $this->setConnection($connection);
         $this->setTable(config('admin.database.classroom_entity_table'));
         parent::__construct($attributes);
+    }
+
+    /**
+     * A User has and belongs to many registration class.
+     *
+     * @return BelongsToMany
+     */
+    public function students(): BelongsToMany
+    {
+        $pivotTable = config('admin.database.student_entity_table');
+        $relatedModel = config('admin.database.students_model');
+        return $this->belongsToMany($relatedModel, $pivotTable, 'id', 'students');
     }
 }

@@ -101,6 +101,7 @@ class CreateAdminTables extends Migration
         Schema::create(config('admin.database.classroom_entity_table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('students');
             $table->timestamps();
         });
 

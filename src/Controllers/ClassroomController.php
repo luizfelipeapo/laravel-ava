@@ -38,6 +38,7 @@ class ClassroomController extends AdminController
         $grid = new Grid(new $classroomModel());
         $grid->column('id', 'ID')->sortable();
         $grid->column('name', trans('admin.name'));
+        $grid->column('students', trans('admin.students'))->pluck('name')->label();
         $grid->column('created_at', trans('admin.created_at'));
         $grid->column('updated_at', trans('admin.updated_at'));
         $grid->actions(function (Grid\Displayers\Actions $actions) {
@@ -66,6 +67,9 @@ class ClassroomController extends AdminController
         $show = new Show($classroomModel::findOrFail($id));
         $show->field('id', 'ID');
         $show->field('name', trans('admin.name'));
+        $show->field('students', trans('admin.permissions'))->as(function ($students) {
+            return $students->pluck('name');
+        })->label();
         $show->field('created_at', trans('admin.created_at'));
         $show->field('updated_at', trans('admin.updated_at'));
         return $show;
@@ -79,11 +83,13 @@ class ClassroomController extends AdminController
     public function form()
     {
         $classroomModel = config('admin.database.classroom_model');
+        $studentsModel = config('admin.database.students_model');
         $form = new Form(new $classroomModel());
         $classroomTable = config('admin.database.classroom_entity_table');
         $connection = config('admin.database.connection');
         $form->display('id', 'ID');
         $form->text('name', trans('admin.name'));
+        $form->multipleSelect('students', trans('admin.students'))->options($studentsModel::all()->pluck('name', 'id'));
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
         $form->saving(function (Form $form) {});
