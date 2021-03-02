@@ -106,8 +106,7 @@ return [
     'quick_create'           => 'Quick create',
     'gender'                 => 'Gender',
     'dob'                    => 'Dob',
-    'students'               => 'students',
-    'Students'               => 'Students',
+    'students'               => 'Students',
     'male'                   => 'Male',
     'female'                 => 'Female',
     'classroom'              => 'Classroom'

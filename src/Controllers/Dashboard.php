@@ -122,4 +122,21 @@ class Dashboard
 
         return Admin::component('admin::dashboard.dependencies', compact('dependencies'));
     }
+
+    public static function classrooms()
+    {
+        $classrooms = [];
+        $classrooModel = config('admin.database.classroom_model');
+        $classroomRegistrationModel = config('admin.database.class_registration_model');
+        foreach ($classrooModel::all() as $classroom) {
+            $students = $classroomRegistrationModel::where('classroom_id', $classroom->id)
+                ->pluck('student_id', 'id')
+                ->all();
+            $classrooms[] = [
+                'name' => $classroom->name,
+                'students' => count($students)
+            ];
+        }
+        return Admin::component('admin::dashboard.classrooms', compact('classrooms'));
+    }
 }
