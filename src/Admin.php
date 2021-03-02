@@ -74,13 +74,13 @@ class Admin
     protected static $bootedCallbacks = [];
 
     /**
-     * Returns the long version of Laravel-admin.
+     * Returns the long version of laravel-ava.
      *
      * @return string The long application version
      */
     public static function getLongVersion()
     {
-        return sprintf('Laravel-admin <comment>version</comment> <info>%s</info>', self::VERSION);
+        return sprintf('laravel-ava <comment>version</comment> <info>%s</info>', self::VERSION);
     }
 
     /**
@@ -299,7 +299,7 @@ class Admin
     }
 
     /**
-     * Register the laravel-admin builtin routes.
+     * Register the laravel-ava builtin routes.
      *
      * @return void
      *
@@ -311,7 +311,7 @@ class Admin
     }
 
     /**
-     * Register the laravel-admin builtin routes.
+     * Register the laravel-ava builtin routes.
      *
      * @return void
      */

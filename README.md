@@ -32,4 +32,4 @@ At last run following command to finish install.
 
     php artisan admin:install
 
-This project have a base developed by AINV technology and Laravel-admin for which it was used for the frontend of the elements, grid, widgets and etc.
+This project have a base developed by AINV technology and laravel-ava for which it was used for the frontend of the elements, grid, widgets and etc.

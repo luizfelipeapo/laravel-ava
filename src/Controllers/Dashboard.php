@@ -57,48 +57,48 @@ class Dashboard
     {
         $extensions = [
             'helpers' => [
-                'name' => 'laravel-admin-ext/helpers',
-                'link' => 'https://github.com/laravel-admin-extensions/helpers',
+                'name' => 'laravel-ava-ext/helpers',
+                'link' => 'https://github.com/laravel-ava-extensions/helpers',
                 'icon' => 'gears',
             ],
             'log-viewer' => [
-                'name' => 'laravel-admin-ext/log-viewer',
-                'link' => 'https://github.com/laravel-admin-extensions/log-viewer',
+                'name' => 'laravel-ava-ext/log-viewer',
+                'link' => 'https://github.com/laravel-ava-extensions/log-viewer',
                 'icon' => 'database',
             ],
             'backup' => [
-                'name' => 'laravel-admin-ext/backup',
-                'link' => 'https://github.com/laravel-admin-extensions/backup',
+                'name' => 'laravel-ava-ext/backup',
+                'link' => 'https://github.com/laravel-ava-extensions/backup',
                 'icon' => 'copy',
             ],
             'config' => [
-                'name' => 'laravel-admin-ext/config',
-                'link' => 'https://github.com/laravel-admin-extensions/config',
+                'name' => 'laravel-ava-ext/config',
+                'link' => 'https://github.com/laravel-ava-extensions/config',
                 'icon' => 'toggle-on',
             ],
             'api-tester' => [
-                'name' => 'laravel-admin-ext/api-tester',
-                'link' => 'https://github.com/laravel-admin-extensions/api-tester',
+                'name' => 'laravel-ava-ext/api-tester',
+                'link' => 'https://github.com/laravel-ava-extensions/api-tester',
                 'icon' => 'sliders',
             ],
             'media-manager' => [
-                'name' => 'laravel-admin-ext/media-manager',
-                'link' => 'https://github.com/laravel-admin-extensions/media-manager',
+                'name' => 'laravel-ava-ext/media-manager',
+                'link' => 'https://github.com/laravel-ava-extensions/media-manager',
                 'icon' => 'file',
             ],
             'scheduling' => [
-                'name' => 'laravel-admin-ext/scheduling',
-                'link' => 'https://github.com/laravel-admin-extensions/scheduling',
+                'name' => 'laravel-ava-ext/scheduling',
+                'link' => 'https://github.com/laravel-ava-extensions/scheduling',
                 'icon' => 'clock-o',
             ],
             'reporter' => [
-                'name' => 'laravel-admin-ext/reporter',
-                'link' => 'https://github.com/laravel-admin-extensions/reporter',
+                'name' => 'laravel-ava-ext/reporter',
+                'link' => 'https://github.com/laravel-ava-extensions/reporter',
                 'icon' => 'bug',
             ],
             'redis-manager' => [
-                'name' => 'laravel-admin-ext/redis-manager',
-                'link' => 'https://github.com/laravel-admin-extensions/redis-manager',
+                'name' => 'laravel-ava-ext/redis-manager',
+                'link' => 'https://github.com/laravel-ava-extensions/redis-manager',
                 'icon' => 'flask',
             ],
         ];

@@ -22,11 +22,11 @@ class Listbox extends MultipleSelect
     protected $settings = [];
 
     protected static $css = [
-        '/vendor/laravel-admin/bootstrap-duallistbox/dist/bootstrap-duallistbox.min.css',
+        '/vendor/laravel-ava/bootstrap-duallistbox/dist/bootstrap-duallistbox.min.css',
     ];
 
     protected static $js = [
-        '/vendor/laravel-admin/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js',
+        '/vendor/laravel-ava/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js',
     ];
 
     public function settings(array $settings)

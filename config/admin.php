@@ -41,7 +41,7 @@ return [
     | Ava bootstrap setting
     |--------------------------------------------------------------------------
     |
-    | This value is the path of laravel-admin bootstrap file.
+    | This value is the path of laravel-ava bootstrap file.
     |
     */
     'bootstrap' => app_path('Admin/bootstrap.php'),
@@ -167,7 +167,7 @@ return [
     | Ava database settings
     |--------------------------------------------------------------------------
     |
-    | Here are database settings for laravel-admin builtin model & tables.
+    | Here are database settings for laravel-ava builtin model & tables.
     |
     */
     'database' => [
@@ -204,7 +204,7 @@ return [
     | User operation log setting
     |--------------------------------------------------------------------------
     |
-    | By setting this option to open or close operation log in laravel-admin.
+    | By setting this option to open or close operation log in laravel-ava.
     |
     */
     'operation_log' => [
@@ -249,7 +249,7 @@ return [
     | Set a default avatar for newly created users.
     |
     */
-    'default_avatar' => '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg',
+    'default_avatar' => '/vendor/laravel-ava/AdminLTE/dist/img/user2-160x160.jpg',
 
     /*
     |--------------------------------------------------------------------------
@@ -306,7 +306,7 @@ return [
     | Show version at footer
     |--------------------------------------------------------------------------
     |
-    | Whether to display the version number of laravel-admin at the footer of
+    | Whether to display the version number of laravel-ava at the footer of
     | each page
     |
     */
@@ -387,11 +387,11 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Settings for extensions in third extension: Laravel-admin.
+    | Settings for extensions in third extension: laravel-ava.
     |--------------------------------------------------------------------------
     |
     | You can find all available extensions here
-    | https://github.com/laravel-admin-extensions.
+    | https://github.com/laravel-ava-extensions.
     |
     */
     'extensions' => [
