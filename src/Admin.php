@@ -330,6 +330,7 @@ class Admin
                 /* @var \Illuminate\Routing\Router $router */
                 $router->resource('auth/users', 'UserController')->names('admin.auth.users');
                 $router->resource('auth/student', 'StudentController')->names('admin.auth.student');
+                $router->resource('auth/classroom', 'ClassroomController')->names('admin.auth.classroom');
                 $router->resource('auth/roles', 'RoleController')->names('admin.auth.roles');
                 $router->resource('auth/permissions', 'PermissionController')->names('admin.auth.permissions');
                 $router->resource('auth/menu', 'MenuController', ['except' => ['create']])->names('admin.auth.menu');

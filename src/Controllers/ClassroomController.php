@@ -17,14 +17,14 @@ use LApolinario\Ava\Grid;
 use LApolinario\Ava\Show;
 use Illuminate\Support\Facades\Hash;
 
-class StudentController extends AdminController
+class ClassroomController extends AdminController
 {
     /**
      * {@inheritdoc}
      */
     protected function title()
     {
-        return trans('admin.students');
+        return trans('admin.classroom');
     }
 
     /**
@@ -34,12 +34,10 @@ class StudentController extends AdminController
      */
     protected function grid()
     {
-        $studentsModel = config('admin.database.students_model');
-        $grid = new Grid(new $studentsModel());
+        $classroomModel = config('admin.database.classroom_model');
+        $grid = new Grid(new $classroomModel());
         $grid->column('id', 'ID')->sortable();
         $grid->column('name', trans('admin.name'));
-        $grid->column('gender', trans('admin.gender'));
-        $grid->column('dob', trans('admin.dob'));
         $grid->column('created_at', trans('admin.created_at'));
         $grid->column('updated_at', trans('admin.updated_at'));
         $grid->actions(function (Grid\Displayers\Actions $actions) {
@@ -64,17 +62,10 @@ class StudentController extends AdminController
      */
     protected function detail($id)
     {
-        $studentsModel = config('admin.database.students_model');
-        $show = new Show($studentsModel::findOrFail($id));
+        $classroomModel = config('admin.database.classroom_model');
+        $show = new Show($classroomModel::findOrFail($id));
         $show->field('id', 'ID');
         $show->field('name', trans('admin.name'));
-        $show->field('gender', trans('admin.gender'))->as(function ($dob) {
-            if ($dob) {
-                return trans('admin.female');
-            }
-            return trans('admin.male');
-        });
-        $show->field('dob', trans('admin.dob'));
         $show->field('created_at', trans('admin.created_at'));
         $show->field('updated_at', trans('admin.updated_at'));
         return $show;
@@ -87,14 +78,12 @@ class StudentController extends AdminController
      */
     public function form()
     {
-        $studentsModel = config('admin.database.students_model');
-        $form = new Form(new $studentsModel());
-        $studentsTable = config('admin.database.student_entity_table');
+        $classroomModel = config('admin.database.classroom_model');
+        $form = new Form(new $classroomModel());
+        $classroomTable = config('admin.database.classroom_entity_table');
         $connection = config('admin.database.connection');
         $form->display('id', 'ID');
         $form->text('name', trans('admin.name'));
-        $form->select('gender', trans('admin.gender'))->options([trans('admin.male'),trans('admin.female')]);
-        $form->date('dob', trans('admin.dob'));
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
         $form->saving(function (Form $form) {});
