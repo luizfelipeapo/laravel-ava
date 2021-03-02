@@ -138,5 +138,7 @@ class CreateAdminTables extends Migration
         Schema::dropIfExists(config('admin.database.role_menu_table'));
         Schema::dropIfExists(config('admin.database.operation_log_table'));
         Schema::dropIfExists(config('admin.database.classroom_entity_table'));
+        Schema::dropIfExists(config('admin.database.class_registration_table'));
+        Schema::dropIfExists(config('admin.database.student_entity_table'));
     }
 }
