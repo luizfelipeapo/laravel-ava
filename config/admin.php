@@ -185,7 +185,7 @@ return [
 
         // Classroom tables and model.
         'student_entity_table' => 'admin_student',
-        'students_model' => LApolinario\Ava\Auth\Database\Students::class,
+        'students_model' => LApolinario\Ava\Auth\Database\Student::class,
 
         // Role table and model.
         'roles_table' => 'admin_roles',
