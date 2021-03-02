@@ -80,7 +80,7 @@ class Admin
      */
     public static function getLongVersion()
     {
-        return sprintf('laravel-ava <comment>version</comment> <info>%s</info>', self::VERSION);
+        return sprintf('Ava <comment>version</comment> <info>%s</info>', self::VERSION);
     }
 
     /**

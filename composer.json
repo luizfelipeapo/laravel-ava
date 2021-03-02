@@ -50,7 +50,7 @@
                 "LApolinario\\Ava\\AvaServiceProvider"
             ],
             "aliases": {
-                "Admin": "LApolinario\\Ava\\Facades\\AvaServiceProvider"
+                "Admin": "LApolinario\\Ava\\Facades\\Admin"
             }
         }
     }

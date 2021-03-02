@@ -29,7 +29,7 @@ use Illuminate\Support\Traits\Macroable;
 use Jenssegers\Mongodb\Eloquent\Model as MongodbModel;
 
 /**
- * Class AvaServiceProvider.
+ * Class Grid.
  * @package LApolinario\Ava
  */
 class Grid
@@ -51,8 +51,8 @@ class Grid
         Concerns\CanDoubleClick,
         ShouldSnakeAttributes,
         Macroable {
-            __call as macroCall;
-        }
+        __call as macroCall;
+    }
 
     /**
      * The grid data model instance.
