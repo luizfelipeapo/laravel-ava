@@ -103,5 +103,6 @@ return [
     'dob'                    => 'Nascimento',
     'students'               => 'Estudantes',
     'male'                   => 'Masculino',
-    'female'                 => 'Feminino'
+    'female'                 => 'Feminino',
+    'classroom'              => 'Turmas'
 ];

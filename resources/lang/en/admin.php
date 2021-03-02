@@ -109,5 +109,6 @@ return [
     'students'               => 'students',
     'Students'               => 'Students',
     'male'                   => 'Male',
-    'female'                 => 'Female'
+    'female'                 => 'Female',
+    'classroom'              => 'Classroom'
 ];
